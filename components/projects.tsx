@@ -11,7 +11,7 @@ import { SectionWrapper } from "./section-wrapper"
 
 export function Projects() {
   return (
-    <SectionWrapper id="projects" className="bg-gray-50">
+    <SectionWrapper id="projects" className="bg-transparent">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -20,7 +20,7 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             My Projects
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -38,19 +38,19 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="glass-card hover-lift h-full">
+              <Card variant="neumorphism" className="hover-lift h-full">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-xl font-display">
                       {project.title}
                     </CardTitle>
                     <div className="flex space-x-2">
-                      <Button variant="ghost" size="icon" asChild>
+                      <Button variant="neumorphism" size="icon" asChild>
                         <Link href={project.github} target="_blank" rel="noopener noreferrer">
                           <Github className="w-4 h-4" />
                         </Link>
                       </Button>
-                      <Button variant="ghost" size="icon" asChild>
+                      <Button variant="neumorphism" size="icon" asChild>
                         <Link href={project.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4" />
                         </Link>
@@ -71,7 +71,7 @@ export function Projects() {
                   )}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="hover-lift">
+                      <Badge key={tech} variant="neumorphism" className="hover-lift">
                         {tech}
                       </Badge>
                     ))}

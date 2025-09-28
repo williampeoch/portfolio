@@ -48,13 +48,17 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           {/* Main content card */}
-          <Card className="glass-card max-w-4xl mx-auto hover-lift">
+          <Card variant="glass" className="max-w-4xl mx-auto hover-lift">
             <CardContent className="p-8 sm:p-12">
               {/* Profile image placeholder */}
               <motion.div
-                className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-4xl font-bold"
+                className="w-32 h-32 mx-auto mb-8 rounded-full neumorphism flex items-center justify-center text-white text-4xl font-bold"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  boxShadow: '8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff'
+                }}
               >
                 WP
               </motion.div>
@@ -96,11 +100,11 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <div className="flex items-center">
+                <div className="flex items-center neumorphism-small px-4 py-2">
                   <Mail className="w-4 h-4 mr-2" />
                   <span>{profile.email}</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center neumorphism-small px-4 py-2">
                   <Phone className="w-4 h-4 mr-2" />
                   <span>{profile.phone}</span>
                 </div>
@@ -113,16 +117,16 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                <Button variant="gradient" size="lg" asChild>
+                <Button variant="neumorphism-primary" size="lg" asChild>
                   <Link href="#contact">Contact Me</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="neumorphism" size="lg" asChild>
                   <Link href={profile.linkedin} target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="neumorphism" size="lg" asChild>
                   <Link href={profile.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
@@ -142,7 +146,7 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+          className="w-6 h-10 neumorphism-small flex justify-center"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

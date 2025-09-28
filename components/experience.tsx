@@ -9,7 +9,7 @@ import { SectionWrapper } from "./section-wrapper"
 
 export function Experience() {
   return (
-    <SectionWrapper id="experience">
+    <SectionWrapper id="experience" className="bg-transparent">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -18,7 +18,7 @@ export function Experience() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             Experience & Internships
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -35,7 +35,7 @@ export function Experience() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="glass-card hover-lift">
+              <Card variant="neumorphism" className="hover-lift">
                 <CardHeader>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <div>
@@ -61,7 +61,7 @@ export function Experience() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {experience.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="hover-lift">
+                      <Badge key={tech} variant="neumorphism" className="hover-lift">
                         {tech}
                       </Badge>
                     ))}

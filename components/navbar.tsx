@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav shadow-lg" : "bg-transparent"
+        isScrolled ? "glass-nav" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -52,12 +52,12 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-2">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="neumorphism-small px-4 py-2 text-sm font-medium text-gray-700 hover-lift hover-press transition-all duration-300"
                 >
                   {item.name}
                 </Link>
@@ -67,7 +67,7 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="gradient" size="sm" asChild>
+            <Button variant="neumorphism-primary" size="sm" asChild>
               <Link href="#contact">Contact</Link>
             </Button>
           </div>
@@ -75,10 +75,9 @@ export function Navbar() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <Button
-              variant="ghost"
+              variant="neumorphism"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="glass-card"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
@@ -88,7 +87,7 @@ export function Navbar() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden glass-card rounded-lg mt-2 p-4"
+            className="md:hidden neumorphism mt-2 p-4"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -99,14 +98,14 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  className="neumorphism-small block px-4 py-3 text-base font-medium text-gray-700 hover-lift hover-press transition-all duration-300 mb-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="pt-4">
-                <Button variant="gradient" size="sm" className="w-full" asChild>
+                <Button variant="neumorphism-primary" size="sm" className="w-full" asChild>
                   <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Contact
                   </Link>

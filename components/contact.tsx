@@ -10,7 +10,7 @@ import { SectionWrapper } from "./section-wrapper"
 
 export function Contact() {
   return (
-    <SectionWrapper id="contact">
+    <SectionWrapper id="contact" className="bg-transparent">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -19,7 +19,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             Contact Me
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="glass-card hover-lift h-full">
+            <Card variant="neumorphism" className="hover-lift h-full">
               <CardHeader>
                 <CardTitle className="text-xl font-display">Contact Information</CardTitle>
               </CardHeader>
@@ -61,22 +61,22 @@ export function Contact() {
                 <div className="pt-4">
                   <h4 className="font-semibold mb-3">Social Networks</h4>
                   <div className="flex space-x-3">
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="neumorphism" size="icon" asChild>
                       <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-5 h-5" />
                       </Link>
                     </Button>
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="neumorphism" size="icon" asChild>
                       <Link href={contact.social.github} target="_blank" rel="noopener noreferrer">
                         <Github className="w-5 h-5" />
                       </Link>
                     </Button>
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="neumorphism" size="icon" asChild>
                       <Link href={contact.social.twitter} target="_blank" rel="noopener noreferrer">
                         <Twitter className="w-5 h-5" />
                       </Link>
                     </Button>
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="neumorphism" size="icon" asChild>
                       <Link href={contact.social.instagram} target="_blank" rel="noopener noreferrer">
                         <Instagram className="w-5 h-5" />
                       </Link>
@@ -96,7 +96,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             {/* Languages */}
-            <Card className="glass-card hover-lift">
+            <Card variant="neumorphism" className="hover-lift">
               <CardHeader>
                 <CardTitle className="flex items-center text-xl font-display">
                   <Globe className="w-5 h-5 mr-2 text-indigo-500" />
@@ -116,7 +116,7 @@ export function Contact() {
             </Card>
 
             {/* Interests */}
-            <Card className="glass-card hover-lift">
+            <Card variant="neumorphism" className="hover-lift">
               <CardHeader>
                 <CardTitle className="flex items-center text-xl font-display">
                   <Heart className="w-5 h-5 mr-2 text-indigo-500" />
@@ -145,20 +145,20 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="glass-card">
+              <Card variant="neumorphism">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 font-display">Internship Search</h3>
                   <p className="text-gray-600 mb-6">
                     I am actively seeking an internship in AI, bioinformatics or biotechnology. Let's discuss exciting opportunities!
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button variant="gradient" size="lg" asChild>
+                    <Button variant="neumorphism-primary" size="lg" asChild>
                       <Link href={`mailto:${contact.email}`}>
                         <Mail className="w-4 h-4 mr-2" />
                         Send Email
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" asChild>
+                    <Button variant="neumorphism" size="lg" asChild>
                       <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-4 h-4 mr-2" />
                         LinkedIn

@@ -8,7 +8,7 @@ import { SectionWrapper } from "./section-wrapper"
 export function About() {
 
   return (
-    <SectionWrapper id="about" className="bg-gray-50">
+    <SectionWrapper id="about" className="bg-transparent">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -17,7 +17,7 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             About Me
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -25,9 +25,9 @@ export function About() {
           </p>
         </motion.div>
 
-        <Card className="glass-card hover-lift">
+        <Card variant="neumorphism" className="hover-lift">
           <CardHeader>
-            <CardTitle className="text-2xl font-display">Presentation</CardTitle>
+            <CardTitle className="text-2xl font-display gradient-text">Presentation</CardTitle>
           </CardHeader>
           <CardContent>
             <motion.p

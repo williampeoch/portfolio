@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
@@ -13,12 +13,15 @@ const badgeVariants = cva(
           "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
+        outline: "text-foreground border border-input",
         glass: "border-gray-200 bg-gray-100/80 backdrop-blur-sm text-gray-700",
+        neumorphism: "neumorphism-small text-gray-700 hover-lift",
+        "neumorphism-primary": "neumorphism-small text-white bg-gradient-to-r from-indigo-500 to-purple-500",
+        "glass-primary": "glass-button text-white bg-gradient-to-r from-indigo-500/80 to-purple-500/80",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "neumorphism",
     },
   }
 )

@@ -5,26 +5,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
+    /* Neumorphism Color Palette */
+    --background: 240 5% 96%;
+    --foreground: 240 10% 3.9%;
+    --card: 240 5% 96%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 240 5% 96%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.75rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 1rem;
+    
+    /* Neumorphism Shadows */
+    --neumorphism-light: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+    --neumorphism-inset: inset 20px 20px 60px #d1d9e6, inset -20px -20px 60px #ffffff;
+    --neumorphism-pressed: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #ffffff;
+    --neumorphism-small: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+    --neumorphism-medium: 12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff;
+    --neumorphism-large: 20px 20px 40px #d1d9e6, -20px -20px 40px #ffffff;
   }
 }
 
@@ -34,24 +43,115 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
   }
 }
 
 @layer components {
+  /* Neumorphism Components */
+  .neumorphism {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-light);
+    border-radius: 1rem;
+  }
+  
+  .neumorphism-inset {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-inset);
+    border-radius: 1rem;
+  }
+  
+  .neumorphism-pressed {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-pressed);
+    border-radius: 1rem;
+  }
+  
+  .neumorphism-small {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-small);
+    border-radius: 0.75rem;
+  }
+  
+  .neumorphism-medium {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-medium);
+    border-radius: 1rem;
+  }
+  
+  .neumorphism-large {
+    background: #f0f0f3;
+    box-shadow: var(--neumorphism-large);
+    border-radius: 1.25rem;
+  }
+  
+  /* Glassmorphism Components */
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-lg;
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
   
   .glass-nav {
-    @apply bg-white/90 backdrop-blur-lg border-b border-gray-200/50;
+    @apply bg-white/10 backdrop-blur-xl border-b border-white/20;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-md border border-white/30;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
   }
   
+  /* Hover Effects */
   .hover-lift {
-    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--neumorphism-large);
+  }
+  
+  .hover-press {
+    @apply transition-all duration-150 ease-out;
+  }
+  
+  .hover-press:active {
+    transform: translateY(2px);
+    box-shadow: var(--neumorphism-pressed);
+  }
+  
+  /* Neumorphism Button Variants */
+  .btn-neumorphism {
+    @apply neumorphism hover-lift hover-press px-6 py-3 font-medium text-gray-700;
+  }
+  
+  .btn-neumorphism-primary {
+    @apply neumorphism hover-lift hover-press px-6 py-3 font-medium text-white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+  }
+  
+  /* Glassmorphism Button Variants */
+  .btn-glass {
+    @apply glass-button hover-lift px-6 py-3 font-medium text-gray-700;
+  }
+  
+  .btn-glass-primary {
+    @apply glass-button hover-lift px-6 py-3 font-medium text-white;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
   }
 }
 

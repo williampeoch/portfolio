@@ -47,16 +47,43 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Neumorphism specific colors
+        neumorphism: {
+          light: '#f0f0f3',
+          dark: '#d1d9e6',
+          white: '#ffffff',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'neumorphism': '20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff',
+        'neumorphism-inset': 'inset 20px 20px 60px #d1d9e6, inset -20px -20px 60px #ffffff',
+        'neumorphism-pressed': 'inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #ffffff',
+        'neumorphism-small': '8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff',
+        'neumorphism-medium': '12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff',
+        'neumorphism-large': '20px 20px 40px #d1d9e6, -20px -20px 40px #ffffff',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        'glass-inset': 'inset 0 0 0 1px rgba(255, 255, 255, 0.2)',
+      },
+      backdropBlur: {
+        'xs': '2px',
+        'sm': '4px',
+        'md': '8px',
+        'lg': '12px',
+        'xl': '16px',
+        '2xl': '24px',
+        '3xl': '40px',
+      },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
         "scale-in": "scaleIn 0.3s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
       },
       keyframes: {
         fadeIn: {
@@ -70,6 +97,14 @@ const config: Config = {
         scaleIn: {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        glow: {
+          "0%": { boxShadow: "0 0 5px rgba(102, 126, 234, 0.5)" },
+          "100%": { boxShadow: "0 0 20px rgba(102, 126, 234, 0.8)" },
         },
       },
     },

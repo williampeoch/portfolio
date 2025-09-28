@@ -36,7 +36,7 @@ export function Skills() {
   ]
 
   return (
-    <SectionWrapper id="skills">
+    <SectionWrapper id="skills" className="bg-transparent">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -45,7 +45,7 @@ export function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             Skills
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -62,7 +62,7 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="glass-card hover-lift h-full">
+              <Card variant="neumorphism" className="hover-lift h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center text-xl font-display">
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>
@@ -76,7 +76,7 @@ export function Skills() {
                     {category.skills.map((skill) => (
                       <Badge
                         key={skill}
-                        variant="glass"
+                        variant="neumorphism"
                         className="hover-lift cursor-default"
                       >
                         {skill}
