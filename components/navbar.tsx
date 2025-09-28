@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
-  { name: "Accueil", href: "#home" },
-  { name: "À propos", href: "#about" },
-  { name: "Expérience", href: "#experience" },
-  { name: "Projets", href: "#projects" },
-  { name: "Compétences", href: "#skills" },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -122,3 +122,4 @@ export function Navbar() {
     </motion.nav>
   )
 }
+

@@ -18,10 +18,10 @@ export function Education() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
-            Formation & Certifications
+            Education & Certifications
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Mon parcours académique en bioinformatique et mes certifications
+            My academic background in bioinformatics and certifications
           </p>
         </motion.div>
 
@@ -36,7 +36,7 @@ export function Education() {
               transition={{ duration: 0.6 }}
             >
               <GraduationCap className="w-6 h-6 mr-3 text-indigo-500" />
-              Formation
+              Education
             </motion.h3>
             
             <div className="space-y-6">
@@ -110,7 +110,7 @@ export function Education() {
                     <CardContent>
                       <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                         <Calendar className="w-4 h-4 mr-2" />
-                        <span>Obtenue en {cert.date}</span>
+                        <span>Obtained in {cert.date}</span>
                       </div>
                     </CardContent>
                   </Card>

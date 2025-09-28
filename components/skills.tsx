@@ -10,25 +10,25 @@ import { SectionWrapper } from "./section-wrapper"
 export function Skills() {
   const skillCategories = [
     {
-      title: "IA & Machine Learning",
+      title: "AI & Machine Learning",
       icon: Code,
       skills: skills.ai_ml,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Bioinformatique",
+      title: "Bioinformatics",
       icon: Server,
       skills: skills.bioinformatics,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Programmation",
+      title: "Programming",
       icon: Wrench,
       skills: skills.programming,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Outils & Technologies",
+      title: "Tools & Technologies",
       icon: Globe,
       skills: skills.tools,
       color: "from-orange-500 to-red-500"
@@ -46,10 +46,10 @@ export function Skills() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
-            Compétences
+            Skills
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Compétences techniques en IA, bioinformatique et développement pour des projets innovants
+            Technical skills in AI, bioinformatics and development for innovative projects
           </p>
         </motion.div>
 

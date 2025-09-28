@@ -114,7 +114,7 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <Button variant="gradient" size="lg" asChild>
-                  <Link href="#contact">Me Contacter</Link>
+                  <Link href="#contact">Contact Me</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href={profile.linkedin} target="_blank" rel="noopener noreferrer">
@@ -156,3 +156,4 @@ export function Hero() {
     </section>
   )
 }
+

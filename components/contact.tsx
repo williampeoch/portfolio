@@ -20,10 +20,10 @@ export function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
-            Contactez-moi
+            Contact Me
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Recherche active de stage - Contactez-moi pour discuter d'opportunités
+            Actively seeking internship - Contact me to discuss opportunities
           </p>
         </motion.div>
 
@@ -38,7 +38,7 @@ export function Contact() {
           >
             <Card className="glass-card hover-lift h-full">
               <CardHeader>
-                <CardTitle className="text-xl font-display">Informations de contact</CardTitle>
+                <CardTitle className="text-xl font-display">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center">
@@ -59,7 +59,7 @@ export function Contact() {
                 </div>
                 
                 <div className="pt-4">
-                  <h4 className="font-semibold mb-3">Réseaux sociaux</h4>
+                  <h4 className="font-semibold mb-3">Social Networks</h4>
                   <div className="flex space-x-3">
                     <Button variant="ghost" size="icon" asChild>
                       <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">
@@ -100,7 +100,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center text-xl font-display">
                   <Globe className="w-5 h-5 mr-2 text-indigo-500" />
-                  Langues
+                  Languages
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -120,7 +120,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center text-xl font-display">
                   <Heart className="w-5 h-5 mr-2 text-indigo-500" />
-                  Centres d'intérêt
+                  Interests
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -147,15 +147,15 @@ export function Contact() {
             >
               <Card className="glass-card">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 font-display">Recherche de stage</h3>
+                  <h3 className="text-2xl font-bold mb-4 font-display">Internship Search</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    Je recherche activement un stage en IA, bioinformatique ou biotechnologie. Discutons d'opportunités passionnantes !
+                    I am actively seeking an internship in AI, bioinformatics or biotechnology. Let's discuss exciting opportunities!
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button variant="gradient" size="lg" asChild>
                       <Link href={`mailto:${contact.email}`}>
                         <Mail className="w-4 h-4 mr-2" />
-                        Envoyer un email
+                        Send Email
                       </Link>
                     </Button>
                     <Button variant="outline" size="lg" asChild>

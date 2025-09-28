@@ -23,3 +23,4 @@ export function SectionWrapper({ children, className = "", id }: SectionWrapperP
     </motion.section>
   )
 }
+

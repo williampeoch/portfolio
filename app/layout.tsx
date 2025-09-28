@@ -16,23 +16,23 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'William Peoch - Développeur Full Stack',
-  description: 'Portfolio de William Peoch, développeur full stack passionné par les technologies modernes et l\'innovation.',
-  keywords: ['développeur', 'full stack', 'React', 'Next.js', 'TypeScript', 'Node.js', 'portfolio'],
+  title: 'William Peoch - Full Stack Developer',
+  description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
+  keywords: ['developer', 'full stack', 'React', 'Next.js', 'TypeScript', 'Node.js', 'portfolio'],
   authors: [{ name: 'William Peoch' }],
   creator: 'William Peoch',
   openGraph: {
     type: 'website',
-    locale: 'fr_FR',
+    locale: 'en_US',
     url: 'https://williampeoch.dev',
-    title: 'William Peoch - Développeur Full Stack',
-    description: 'Portfolio de William Peoch, développeur full stack passionné par les technologies modernes et l\'innovation.',
+    title: 'William Peoch - Full Stack Developer',
+    description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
     siteName: 'William Peoch Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'William Peoch - Développeur Full Stack',
-    description: 'Portfolio de William Peoch, développeur full stack passionné par les technologies modernes et l\'innovation.',
+    title: 'William Peoch - Full Stack Developer',
+    description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
   },
   robots: {
     index: true,
@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         <ThemeProvider
           defaultTheme="system"
