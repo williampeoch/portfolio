@@ -8,7 +8,7 @@ import { SectionWrapper } from "./section-wrapper"
 export function About() {
 
   return (
-    <SectionWrapper id="about" className="bg-gray-50 dark:bg-gray-900">
+    <SectionWrapper id="about" className="bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -20,7 +20,7 @@ export function About() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             About Me
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Discover my background, passions and vision for web development
           </p>
         </motion.div>
@@ -31,7 +31,7 @@ export function About() {
           </CardHeader>
           <CardContent>
             <motion.p
-              className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg"
+              className="text-gray-700 leading-relaxed text-lg"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}

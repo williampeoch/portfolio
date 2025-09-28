@@ -48,7 +48,7 @@ export function Skills() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             Skills
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Technical skills in AI, bioinformatics and development for innovative projects
           </p>
         </motion.div>

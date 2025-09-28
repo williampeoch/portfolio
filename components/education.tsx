@@ -8,7 +8,7 @@ import { SectionWrapper } from "./section-wrapper"
 
 export function Education() {
   return (
-    <SectionWrapper id="education" className="bg-gray-50 dark:bg-gray-900">
+    <SectionWrapper id="education" className="bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -20,7 +20,7 @@ export function Education() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             Education & Certifications
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             My academic background in bioinformatics and certifications
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export function Education() {
                       <CardTitle className="text-xl font-display">
                         {edu.degree}
                       </CardTitle>
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-600 dark:text-gray-300">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-600">
                         <div className="flex items-center mb-2 sm:mb-0">
                           <MapPin className="w-4 h-4 mr-2" />
                           <span className="font-medium">{edu.school}</span>
@@ -65,7 +65,7 @@ export function Education() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed">
                         {edu.description}
                       </p>
                     </CardContent>
@@ -102,13 +102,13 @@ export function Education() {
                       <CardTitle className="text-lg font-display">
                         {cert.name}
                       </CardTitle>
-                      <div className="text-gray-600 dark:text-gray-300">
+                      <div className="text-gray-600">
                         <p className="font-medium">{cert.issuer}</p>
                         <p className="text-sm">ID: {cert.credential}</p>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="w-4 h-4 mr-2" />
                         <span>Obtained in {cert.date}</span>
                       </div>

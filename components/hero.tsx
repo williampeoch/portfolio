@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900" />
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -70,7 +70,7 @@ export function Hero() {
               </motion.h1>
 
               <motion.h2
-                className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-6"
+                className="text-xl sm:text-2xl text-gray-600 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -80,7 +80,7 @@ export function Hero() {
 
               {/* Location */}
               <motion.div
-                className="flex items-center justify-center mb-8 text-gray-600 dark:text-gray-300"
+                className="flex items-center justify-center mb-8 text-gray-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -91,7 +91,7 @@ export function Hero() {
 
               {/* Contact info */}
               <motion.div
-                className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-600 dark:text-gray-300"
+                className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -142,12 +142,12 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <motion.div
-            className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"
+            className="w-1 h-3 bg-gray-400 rounded-full mt-2"
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />

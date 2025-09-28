@@ -22,7 +22,7 @@ export function Contact() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             Contact Me
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Actively seeking internship - Contact me to discuss opportunities
           </p>
         </motion.div>
@@ -43,19 +43,19 @@ export function Contact() {
               <CardContent className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 mr-3 text-indigo-500" />
-                  <a href={`mailto:${contact.email}`} className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  <a href={`mailto:${contact.email}`} className="text-gray-700 hover:text-indigo-600 transition-colors">
                     {contact.email}
                   </a>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-indigo-500" />
-                  <a href={`tel:${contact.phone}`} className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  <a href={`tel:${contact.phone}`} className="text-gray-700 hover:text-indigo-600 transition-colors">
                     {contact.phone}
                   </a>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-indigo-500" />
-                  <span className="text-gray-700 dark:text-gray-300">{contact.location}</span>
+                  <span className="text-gray-700">{contact.location}</span>
                 </div>
                 
                 <div className="pt-4">
@@ -106,9 +106,9 @@ export function Contact() {
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {languages.map((lang, index) => (
-                    <div key={lang.name} className="text-center p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100">{lang.name}</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{lang.level}</p>
+                    <div key={lang.name} className="text-center p-4 rounded-lg bg-gray-50">
+                      <h4 className="font-semibold text-gray-900">{lang.name}</h4>
+                      <p className="text-sm text-gray-600">{lang.level}</p>
                     </div>
                   ))}
                 </div>
@@ -128,7 +128,7 @@ export function Contact() {
                   {interests.map((interest) => (
                     <span
                       key={interest}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm hover-lift"
+                      className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover-lift"
                     >
                       {interest}
                     </span>
@@ -148,7 +148,7 @@ export function Contact() {
               <Card className="glass-card">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 font-display">Internship Search</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  <p className="text-gray-600 mb-6">
                     I am actively seeking an internship in AI, bioinformatics or biotechnology. Let's discuss exciting opportunities!
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">

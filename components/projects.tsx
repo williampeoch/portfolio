@@ -11,7 +11,7 @@ import { SectionWrapper } from "./section-wrapper"
 
 export function Projects() {
   return (
-    <SectionWrapper id="projects" className="bg-gray-50 dark:bg-gray-900">
+    <SectionWrapper id="projects" className="bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -23,7 +23,7 @@ export function Projects() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             My Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             AI projects, hackathons and bioinformatics applications
           </p>
         </motion.div>
@@ -59,12 +59,12 @@ export function Projects() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-700 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   {project.hackathon && project.hackathon.includes("1st Place") && (
-                    <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                      <p className="text-sm text-blue-700 dark:text-blue-300 font-medium">
+                    <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                      <p className="text-sm text-blue-700 font-medium">
                         🏆 {project.hackathon}
                       </p>
                     </div>

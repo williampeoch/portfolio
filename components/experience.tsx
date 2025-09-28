@@ -21,7 +21,7 @@ export function Experience() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display">
             Experience & Internships
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             My machine learning internships and professional experiences
           </p>
         </motion.div>
@@ -42,11 +42,11 @@ export function Experience() {
                       <CardTitle className="text-xl font-display mb-2">
                         {experience.title}
                       </CardTitle>
-                      <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
+                      <div className="flex items-center text-gray-600 mb-2">
                         <Building className="w-4 h-4 mr-2" />
                         <span className="font-medium">{experience.company}</span>
                       </div>
-                      <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                      <div className="flex items-center text-gray-500 text-sm">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span className="mr-4">{experience.location}</span>
                         <Calendar className="w-4 h-4 mr-2" />
@@ -56,7 +56,7 @@ export function Experience() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-700 mb-4 leading-relaxed">
                     {experience.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
