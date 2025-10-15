@@ -8,10 +8,12 @@ import { Projects } from "@/components/projects"
 import { Skills } from "@/components/skills"
 import { Education } from "@/components/education"
 import { Contact } from "@/components/contact"
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
+      <NeuralNetworkBackground />
       <Navbar />
       <Hero />
       <About />

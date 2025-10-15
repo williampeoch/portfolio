@@ -3,7 +3,7 @@ export const profile = {
   title: "Bioinformatics Student | AI & Biotechnology",
   location: "Hong Kong (Exchange) | Lyon, France",
   email: "william.peoch@example.com",
-  phone: "+33 6 12 34 56 78",
+  phone: "+33 6 66 34 56 78",
   linkedin: "https://linkedin.com/in/williampeoch",
   github: "https://github.com/williampeoch",
   website: "https://williampeoch.dev",
@@ -185,9 +185,9 @@ export const interests = [
 ]
 
 export const contact = {
-  email: "william.peoch@example.com",
+  email: "william.peoch@insa-lyon.fr",
   phone: "+33 6 12 34 56 78",
-  location: "Hong Kong (Exchange) | Lyon, France",
+  location: "Hong Kong | Lyon, France",
   social: {
     linkedin: "https://linkedin.com/in/williampeoch",
     github: "https://github.com/williampeoch",

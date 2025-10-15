@@ -79,7 +79,11 @@ export function Navbar() {
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMobileMenuOpen ? (
+                <X size={20} className="text-gray-700" />
+              ) : (
+                <Menu size={20} className="text-gray-700" />
+              )}
             </Button>
           </div>
         </div>

@@ -20,9 +20,6 @@ export function About() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
             About Me
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover my background, passions and vision for web development
-          </p>
         </motion.div>
 
         <Card variant="neumorphism" className="hover-lift">
