@@ -44,18 +44,7 @@ export function Projects() {
                     <CardTitle className="text-xl font-display">
                       {project.title}
                     </CardTitle>
-                    <div className="flex space-x-2">
-                      <Button variant="neumorphism" size="icon" asChild>
-                        <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4" />
-                        </Link>
-                      </Button>
-                      <Button variant="neumorphism" size="icon" asChild>
-                        <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
-                        </Link>
-                      </Button>
-                    </div>
+                    {/* Project icon buttons removed as requested */}
                   </div>
                 </CardHeader>
                 <CardContent>

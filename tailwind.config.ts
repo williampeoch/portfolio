@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-work-sans)', 'Work Sans', 'system-ui', 'sans-serif'],
         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -47,10 +47,17 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom palette colors - very subtle
+        palette: {
+          light: '#BBDCE5',
+          cream: '#ECEEDF', 
+          beige: '#D9C4B0',
+          warm: '#CFAB8D',
+        },
         // Neumorphism specific colors
         neumorphism: {
-          light: '#f0f0f3',
-          dark: '#d1d9e6',
+          light: '#ffffff',
+          dark: 'rgba(217, 196, 176, 0.3)',
           white: '#ffffff',
         },
       },
@@ -60,12 +67,12 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        'neumorphism': '20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff',
-        'neumorphism-inset': 'inset 20px 20px 60px #d1d9e6, inset -20px -20px 60px #ffffff',
-        'neumorphism-pressed': 'inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #ffffff',
-        'neumorphism-small': '8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff',
-        'neumorphism-medium': '12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff',
-        'neumorphism-large': '20px 20px 40px #d1d9e6, -20px -20px 40px #ffffff',
+        'neumorphism': '20px 20px 60px rgba(0, 0, 0, 0.15), -20px -20px 60px rgba(255, 255, 255, 0.9)',
+        'neumorphism-inset': 'inset 20px 20px 60px rgba(0, 0, 0, 0.1), inset -20px -20px 60px rgba(255, 255, 255, 0.95)',
+        'neumorphism-pressed': 'inset 2px 2px 4px rgba(0, 0, 0, 0.15), inset -2px -2px 4px rgba(255, 255, 255, 0.9)',
+        'neumorphism-small': '8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.95)',
+        'neumorphism-medium': '12px 12px 24px rgba(0, 0, 0, 0.12), -12px -12px 24px rgba(255, 255, 255, 0.9)',
+        'neumorphism-large': '20px 20px 40px rgba(0, 0, 0, 0.15), -20px -20px 40px rgba(255, 255, 255, 0.9)',
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         'glass-inset': 'inset 0 0 0 1px rgba(255, 255, 255, 0.2)',
       },

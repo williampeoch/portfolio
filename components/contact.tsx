@@ -58,31 +58,7 @@ export function Contact() {
                   <span className="text-gray-700">{contact.location}</span>
                 </div>
                 
-                <div className="pt-4">
-                  <h4 className="font-semibold mb-3">Social Networks</h4>
-                  <div className="flex space-x-3">
-                    <Button variant="neumorphism" size="icon" asChild>
-                      <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="w-5 h-5" />
-                      </Link>
-                    </Button>
-                    <Button variant="neumorphism" size="icon" asChild>
-                      <Link href={contact.social.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-5 h-5" />
-                      </Link>
-                    </Button>
-                    <Button variant="neumorphism" size="icon" asChild>
-                      <Link href={contact.social.twitter} target="_blank" rel="noopener noreferrer">
-                        <Twitter className="w-5 h-5" />
-                      </Link>
-                    </Button>
-                    <Button variant="neumorphism" size="icon" asChild>
-                      <Link href={contact.social.instagram} target="_blank" rel="noopener noreferrer">
-                        <Instagram className="w-5 h-5" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
+                {/* Social Networks section removed as requested */}
               </CardContent>
             </Card>
           </motion.div>

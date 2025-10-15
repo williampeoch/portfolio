@@ -11,12 +11,12 @@ export function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-200" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full opacity-20 blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-gray-300 to-gray-400 rounded-full opacity-15 blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -28,7 +28,7 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-3xl"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full opacity-15 blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -52,12 +52,12 @@ export function Hero() {
             <CardContent className="p-8 sm:p-12">
               {/* Profile image placeholder */}
               <motion.div
-                className="w-32 h-32 mx-auto mb-8 rounded-full neumorphism flex items-center justify-center text-white text-4xl font-bold"
+                className="w-32 h-32 mx-auto mb-8 rounded-full neumorphism flex items-center justify-center text-gray-800 text-4xl font-bold"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  boxShadow: '8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff'
+                  background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
+                  boxShadow: '8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.95)'
                 }}
               >
                 WP
