@@ -27,8 +27,9 @@ function NeuralNetworkScene() {
   const maxConnections = 220;
 
   // Colors
-  const baseColor = useMemo(() => new THREE.Color(0x6fdcff), []); // cyan-blue
-  const pulseColor = useMemo(() => new THREE.Color(0x3bb6ff), []);
+  // Light cyan palette for a brighter, airier look
+  const baseColor = useMemo(() => new THREE.Color("#7EE8FA"), []);
+  const pulseColor = useMemo(() => new THREE.Color("#E0FBFF"), []);
 
   // Mouse and scroll interactivity
   const groupRef = useRef<THREE.Group>(null);
@@ -55,7 +56,6 @@ function NeuralNetworkScene() {
 
   // Generate node positions
   const nodes: Node[] = useMemo(() => {
-    const rng = new THREE.MathUtils.seededRandom();
     const list: Node[] = [];
     for (let i = 0; i < nodeCount; i++) {
       const p = new THREE.Vector3(
@@ -99,7 +99,7 @@ function NeuralNetworkScene() {
       blending: THREE.AdditiveBlending,
       linewidth: 1, // ignored in most WebGL impls, but kept
       vertexColors: true,
-      opacity: 0.7,
+      opacity: 0.5,
     })
   );
 
@@ -123,13 +123,13 @@ function NeuralNetworkScene() {
       positions[idx + 4] = pb.y;
       positions[idx + 5] = pb.z;
 
-      // initialize colors low; will update in frame loop
-      colors[idx + 0] = baseColor.r * 0.2;
-      colors[idx + 1] = baseColor.g * 0.2;
-      colors[idx + 2] = baseColor.b * 0.2;
-      colors[idx + 3] = baseColor.r * 0.2;
-      colors[idx + 4] = baseColor.g * 0.2;
-      colors[idx + 5] = baseColor.b * 0.2;
+      // initialize colors; softer baseline
+      colors[idx + 0] = baseColor.r * 0.4;
+      colors[idx + 1] = baseColor.g * 0.4;
+      colors[idx + 2] = baseColor.b * 0.4;
+      colors[idx + 3] = baseColor.r * 0.4;
+      colors[idx + 4] = baseColor.g * 0.4;
+      colors[idx + 5] = baseColor.b * 0.4;
     }
 
     linesGeomRef.current.setAttribute("position", new THREE.BufferAttribute(positions, 3));
@@ -144,6 +144,7 @@ function NeuralNetworkScene() {
 
   // Instanced nodes (small emissive spheres)
   const nodesRef = useRef<THREE.InstancedMesh>(null);
+  const halosRef = useRef<THREE.InstancedMesh>(null);
   const tempObj = useMemo(() => new THREE.Object3D(), []);
   const nodeBaseScale = 0.035;
 
@@ -157,6 +158,18 @@ function NeuralNetworkScene() {
       nodesRef.current.setMatrixAt(i, tempObj.matrix);
     }
     nodesRef.current.instanceMatrix.needsUpdate = true;
+
+    // halos are slightly larger
+    if (halosRef.current) {
+      for (let i = 0; i < nodes.length; i++) {
+        const p = nodes[i].position;
+        tempObj.position.copy(p);
+        tempObj.scale.setScalar(nodeBaseScale * 2.2);
+        tempObj.updateMatrix();
+        halosRef.current.setMatrixAt(i, tempObj.matrix);
+      }
+      halosRef.current.instanceMatrix.needsUpdate = true;
+    }
   }, [nodes, tempObj]);
 
   // Animation
@@ -205,47 +218,53 @@ function NeuralNetworkScene() {
       colorAttr.needsUpdate = true;
     }
 
-    // Subtle node brightness based on proximity to mouse-projected plane
+    // Keep node color stable to avoid perceived flicker from line pulses
     if (nodesRef.current) {
       const material = nodesRef.current.material as THREE.MeshBasicMaterial;
-      // Map mouse to 3D target point in front of camera
-      const ray = new THREE.Raycaster();
-      ray.setFromCamera(mouse.current, state.camera);
-      const target = new THREE.Vector3();
-      target.copy(state.camera.position).add(ray.ray.direction.multiplyScalar(4));
-
-      // Aggregate proximity factor across all nodes (cheap approximation)
-      let prox = 0;
-      for (let i = 0; i < Math.min(40, nodes.length); i++) {
-        const d = target.distanceTo(nodes[i].position);
-        prox += 1.0 / (1.0 + d * d);
-      }
-      prox = clamp(prox / 12, 0, 1);
-      const emissiveIntensity = THREE.MathUtils.lerp(0.6, 1.25, prox);
-      material.color.set(baseColor.clone().multiplyScalar(emissiveIntensity));
+      material.color.set(baseColor);
     }
   });
 
   return (
     <group ref={groupRef}>
       {/* Lines */}
-      <lineSegments geometry={linesGeomRef.current}>
+      <lineSegments geometry={linesGeomRef.current} renderOrder={0}>
         <primitive object={lineMaterialRef.current} attach="material" />
       </lineSegments>
 
-      {/* Nodes */}
+      {/* Nodes core */}
       <instancedMesh
         ref={nodesRef}
         args={[undefined as any, undefined as any, nodeCount]}
         frustumCulled={false}
+        renderOrder={2}
       >
         <sphereGeometry args={[1, 12, 12]} />
         <meshBasicMaterial
           color={baseColor}
           transparent
-          opacity={0.85}
+          opacity={1}
+          blending={THREE.NormalBlending}
+          depthWrite={true}
+          depthTest={true}
+        />
+      </instancedMesh>
+
+      {/* Soft glow halos */}
+      <instancedMesh
+        ref={halosRef}
+        args={[undefined as any, undefined as any, nodeCount]}
+        frustumCulled={false}
+        renderOrder={1}
+      >
+        <sphereGeometry args={[1, 12, 12]} />
+        <meshBasicMaterial
+          color={baseColor}
+          transparent
+          opacity={0.18}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
+          depthTest={true}
         />
       </instancedMesh>
 
@@ -272,12 +291,11 @@ export default function NeuralNetworkBackground() {
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         camera={{ position: [0, 0, 10], fov: 60 }}
       >
-        <color attach="background" args={[0, 0, 0]} />
         <NeuralNetworkScene />
       </Canvas>
       {/* Tailwind CSS glow overlay (subtle vignette) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,209,255,0.08)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(126,232,250,0.12)_0%,transparent_55%)]" />
     </div>
   );
 }

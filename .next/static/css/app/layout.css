@@ -1025,6 +1025,9 @@ body{
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
+.bg-\[radial-gradient\(ellipse_at_center\2c rgba\(126\2c 232\2c 250\2c 0\.12\)_0\%\2c transparent_55\%\)\]{
+  background-image: radial-gradient(ellipse at center,rgba(126,232,250,0.12) 0%,transparent 55%);
+}
 .from-blue-500{
   --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
@@ -1112,6 +1115,9 @@ body{
 }
 .to-black\/30{
   --tw-gradient-to: rgb(0 0 0 / 0.3) var(--tw-gradient-to-position);
+}
+.to-black\/10{
+  --tw-gradient-to: rgb(0 0 0 / 0.1) var(--tw-gradient-to-position);
 }
 .stroke-gray-800{
   stroke: #1f2937;
