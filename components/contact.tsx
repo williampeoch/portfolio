@@ -137,7 +137,7 @@ export function Contact() {
                     <Button variant="neumorphism" size="lg" asChild>
                       <a href={profile.resume} download>
                         <Download className="w-4 h-4 mr-2" />
-                        Télécharger CV
+                        Download CV
                       </a>
                     </Button>
                     <Button variant="neumorphism" size="lg" asChild>

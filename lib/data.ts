@@ -116,7 +116,7 @@ export const education = [
     school: "INSA Lyon – National Institute of Applied Sciences",
     location: "Lyon, France",
     period: "Sep 2024 – Jun 2027",
-    description: "Graduate engineering curriculum focused on bioinformatics, modeling, and biomedical data science."
+    description: "Graduate engineering curriculum focused on bioinformatics, mathematical modeling, and biomedical data science."
   },
   {
     id: 2,

@@ -118,7 +118,7 @@ export function Navbar() {
                 <Button variant="neumorphism" size="sm" className="w-full" asChild>
                   <a href={profile.resume} download onClick={() => setIsMobileMenuOpen(false)}>
                     <Download className="w-4 h-4 mr-2" />
-                    Télécharger CV
+                    Download CV
                   </a>
                 </Button>
                 <Button variant="neumorphism-primary" size="sm" className="w-full" asChild>
