@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/williampeoch/Programming/portfolio/app/layout":["static/media/36966cca54120369-s.p.woff2","static/media/c9e6921c7fc300d8-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/williampeoch/Programming/portfolio/app/layout\":[\"static/media/36966cca54120369-s.p.woff2\",\"static/media/c9e6921c7fc300d8-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

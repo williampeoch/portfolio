@@ -16,23 +16,23 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'William Peoch - Full Stack Developer',
-  description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
-  keywords: ['developer', 'full stack', 'React', 'Next.js', 'TypeScript', 'Node.js', 'portfolio'],
-  authors: [{ name: 'William Peoch' }],
-  creator: 'William Peoch',
+  title: "William Peoc'h – Medical AI & Bioinformatics",
+  description: "Portfolio of William Peoc'h, MSc Bioinformatics student focusing on medical AI, representation learning, and multimodal learning for biomedical data.",
+  keywords: ['medical ai', 'bioinformatics', 'representation learning', 'multimodal learning', 'william peoc\'h', 'portfolio'],
+  authors: [{ name: "William Peoc'h" }],
+  creator: "William Peoc'h",
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://williampeoch.dev',
-    title: 'William Peoch - Full Stack Developer',
-    description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
-    siteName: 'William Peoch Portfolio',
+    url: 'https://williampeoch.me',
+    title: "William Peoc'h – Medical AI & Bioinformatics",
+    description: "Portfolio of William Peoc'h, MSc Bioinformatics student focusing on medical AI, representation learning, and multimodal learning for biomedical data.",
+    siteName: "William Peoc'h Portfolio",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'William Peoch - Full Stack Developer',
-    description: 'Portfolio of William Peoch, full stack developer passionate about modern technologies and innovation.',
+    title: "William Peoc'h – Medical AI & Bioinformatics",
+    description: "Portfolio of William Peoc'h, MSc Bioinformatics student focusing on medical AI, representation learning, and multimodal learning for biomedical data.",
   },
   robots: {
     index: true,

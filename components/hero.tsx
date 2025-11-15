@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { profile } from "@/lib/data"
 import { MapPin, Mail, Phone, Linkedin, Github } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -50,17 +51,23 @@ export function Hero() {
           {/* Main content card */}
           <Card variant="glass" className="max-w-4xl mx-auto hover-lift">
             <CardContent className="p-8 sm:p-12">
-              {/* Profile image placeholder */}
+              {/* Profile image */}
               <motion.div
-                className="w-32 h-32 mx-auto mb-8 rounded-full neumorphism flex items-center justify-center text-gray-800 text-4xl font-bold"
+                className="w-32 h-32 mx-auto mb-8 rounded-full neumorphism overflow-hidden relative"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 style={{
-                  background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
                   boxShadow: '8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.95)'
                 }}
               >
-                WP
+                <Image
+                  src={profile.profileImage}
+                  alt={`${profile.name} profile picture`}
+                  fill
+                  className="object-cover"
+                  sizes="128px"
+                  priority
+                />
               </motion.div>
 
               {/* Name and title */}

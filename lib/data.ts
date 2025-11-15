@@ -1,33 +1,34 @@
 export const profile = {
   name: "William Peoc'h",
-  title: "Bioinformatics Student | AI & Biotechnology",
-  location: "Hong Kong (Exchange) | Lyon, France",
-  email: "william.peoch@example.com",
-  phone: "+33 6 66 34 56 78",
+  title: "MSc Bioinformatics Student · AI/ML · Deep Learning",
+  location: "Lyon, France · Hong Kong SAR",
+  email: "william.peoch@insa-lyon.fr",
+  phone: "+33 6 66 18 93 77",
   linkedin: "https://linkedin.com/in/williampeoch",
   github: "https://github.com/williampeoch",
-  website: "https://williampeoch.dev",
-  about: "Fourth-year engineering student at INSA Lyon specializing in Bioinformatics, currently on exchange at City University of Hong Kong in Mathematics with a focus on Machine Learning. Passionate about AI and biotechnology, I build practical AI systems at the intersection of bioinformatics, mathematics, and healthcare. Actively seeking an internship to apply my skills and contribute to innovative projects."
+  website: "https://williampeoch.me",
+  profileImage: "/profile.jpg",
+  about: "MSc Bioinformatics and Modeling student at INSA Lyon with research interests in medical AI, representation learning, multimodal learning, and foundation models for biomedical data. I build AI systems for biomedical and clinical applications and am currently spending Fall 2025 at City University of Hong Kong (Mathematics & Machine Learning)."
 }
 
 export const experiences = [
   {
     id: 1,
-    title: "Machine Learning Internship",
-    company: "Inria",
+    title: "Machine Learning Research Intern",
+    company: "INRIA – French National Institute for Research in Digital Science and Technology",
     location: "Lyon, France",
-    period: "July 2025 - August 2025",
-    description: "Targeted discovery of therapeutic targets for neurological diseases using generative LLMs. Fine-tuning BERT and LLM-based classifiers, building NER pipelines for biomedical literature, scraping and curating biomedical databases.",
-    technologies: ["BERT", "LLM", "Python", "NER", "Biomedical Data", "Machine Learning"]
+    period: "Jun 2025 – Aug 2025",
+    description: "Fine-tuned transformer-based models (BERT, LLMs) for biomedical text classification, built NER pipelines that extract therapeutic targets from biomedical and clinical literature, curated large-scale biomedical datasets, and ran experiments autonomously on Grid'5000 HPC clusters.",
+    technologies: ["Transformers", "BERT", "LLMs", "NER", "PyTorch", "Biomedical NLP", "HPC"]
   },
   {
     id: 2,
-    title: "Machine Learning Internship",
-    company: "Groupe Axon' Cable",
+    title: "Machine Learning Intern",
+    company: "Axon' Cable – Medical Division",
     location: "Reims, France",
-    period: "April 2024 - June 2024",
-    description: "Development of classification and segmentation models for diabetic retinopathy detection and lesion highlighting on fundus images, enabling earlier diagnosis and better patient outcomes.",
-    technologies: ["Computer Vision", "Deep Learning", "Medical Imaging", "C#", "RAG", "PyTorch"]
+    period: "Apr 2024 – Jun 2024",
+    description: "Developed CNN and U-Net models from scratch for diabetic-retinopathy lesion detection/segmentation, boosted lesion classification accuracy to 86% through advanced preprocessing across heterogeneous datasets, integrated the full pipeline inside a C# application for ophthalmologists, and added a RAG module to enrich diagnostic context.",
+    technologies: ["CNN", "U-Net", "Computer Vision", "PyTorch", "Medical Imaging", "C#", "RAG"]
   }
 ]
 
@@ -35,24 +36,24 @@ export const projects = [
   {
     id: 1,
     title: "X-Raystral - AI Medical Reports",
-    description: "AI tool generating medical reports from chest X-rays by fine-tuning Pixtral-12B and integrating it into a Next.js app. Enhanced outputs with medical literature and patient data. Complete MVP built and pitched in 48h.",
+    description: "Built during the Paris Bio x AI Hackathon: fine-tuned Pixtral-12B on chest X-ray datasets to deliver a medical report generator with structured outputs, literature grounding, and clinician-friendly UX.",
     image: "/projects/xraystral.jpg",
-    technologies: ["Medical Imaging", "Finetuning", "Computer Vision", "LLM", "Next.js", "Pixtral-12B"],
+    technologies: ["Medical Imaging", "Fine-tuning", "Computer Vision", "LLM", "Next.js", "Pixtral-12B"],
     github: "https://github.com/williampeoch/xraystral",
     demo: "https://xraystral-demo.williampeoch.dev",
     featured: true,
-    hackathon: "Paris Bio x AI Hackathon (Entrepreneur First) - December 2024"
+    hackathon: "Paris Bio x AI Hackathon - Medical report generator (Dec 2024)"
   },
   {
     id: 2,
     title: "AI Virtual Medical Doctor",
-    description: "AI-powered virtual doctor with image-based diagnostics, voice/chat interface and automatic appointment booking. Built in less than 24h.",
+    description: "AI medical assistant with image diagnostics plus multilingual voice/chat interface; shipped in <24h and won 1st prize + Best Pitch vs 150+ participants at the Mistral AI x Alan Hackathon.",
     image: "/projects/ai-doctor.jpg",
     technologies: ["Next.js", "LLM", "Voice Interface", "Medical AI", "Computer Vision"],
     github: "https://github.com/williampeoch/ai-medical-doctor",
     demo: "https://ai-doctor.williampeoch.dev",
     featured: true,
-    hackathon: "1st Place - Mistral x Alan Hackathon - October 2024"
+    hackathon: "1st Place & Best Pitch - Mistral AI x Alan Hackathon (Oct 2024)"
   },
   {
     id: 3,
@@ -90,68 +91,47 @@ export const projects = [
 ]
 
 export const skills = {
-  ai_ml: [
-    "Python", "PyTorch", "TensorFlow", "Scikit-learn", "BERT", "LLM", "Computer Vision", "Deep Learning", "Machine Learning", "NLP", "RAG", "Fine-tuning"
+  machine_learning: [
+    "Deep Learning", "Transformers", "LLMs & Fine-tuning", "Computer Vision", "Generative Models", "Representation Learning", "Multimodal Learning", "Medical AI"
+  ],
+  mathematics: [
+    "Linear Algebra", "Probability Theory", "Statistics", "Optimization"
   ],
   bioinformatics: [
-    "Biopython", "R", "Bioconductor", "BLAST", "Sequence Analysis", "Molecular Biology", "Genomics", "Proteomics", "Biomedical Data", "Medical Imaging"
+    "Genomics", "Transcriptomics", "NGS", "RNA-seq", "Sequence Alignment", "Biomedical Data Curation"
   ],
-  programming: [
-    "Python", "JavaScript", "TypeScript", "C#", "R", "SQL", "HTML", "CSS", "React", "Next.js", "Node.js", "Docker"
+  software: [
+    "Python", "R", "TypeScript", "C#", "Docker", "Git", "Linux"
   ],
   tools: [
-    "Git", "Docker", "VS Code", "Jupyter", "MongoDB", "PostgreSQL", "AWS", "Vercel", "Linux", "Bash", "LaTeX", "Matlab"
+    "PyTorch", "TensorFlow", "HuggingFace", "NumPy", "SciPy", "scikit-learn", "pandas"
   ]
 }
 
 export const education = [
   {
     id: 1,
-    degree: "Exchange - Mathematics & Machine Learning",
-    school: "City University of Hong Kong",
-    location: "Hong Kong",
-    period: "August 2025 - February 2026",
-    description: "Major in Mathematics, minor in Machine Learning; exploring advanced topics in AI and data science."
+    degree: "MSc in Bioinformatics and Modeling",
+    school: "INSA Lyon – National Institute of Applied Sciences",
+    location: "Lyon, France",
+    period: "Sep 2024 – Jun 2027",
+    description: "Graduate engineering curriculum focused on bioinformatics, modeling, and biomedical data science."
   },
   {
     id: 2,
-    degree: "Engineering in Bioinformatics and Modeling",
-    school: "INSA Lyon (Institut National des Sciences Appliquées de Lyon)",
-    location: "Lyon, France",
-    period: "September 2024 - June 2027",
-    description: "Engineering education specialized in bioinformatics with focus on modeling and biological data analysis."
+    degree: "Exchange Semester – Mathematics & Machine Learning",
+    school: "City University of Hong Kong",
+    location: "Hong Kong SAR",
+    period: "Sep 2025 – Jan 2026",
+    description: "Current exchange within the Department of Mathematics to deepen expertise in advanced machine learning."
   },
   {
     id: 3,
-    degree: "DUT Computer Science - Data Science Specialization",
-    school: "IUT de Reims–Châlons–Charleville",
+    degree: "Bachelor in Computer Science",
+    school: "University Institute of Technology of Reims (URCA)",
     location: "Reims, France",
-    period: "2022 - 2024",
-    description: "Technical training in computer science with data science specialization. Skills: Python, data visualization, MongoDB, SQL, React.js, Docker, Symfony, data analysis, PHP, Git, relational databases, Flask, linear algebra, graph theory, probabilities."
-  },
-  {
-    id: 4,
-    degree: "Biology Bachelor's Degree",
-    school: "Université de Nantes",
-    location: "Nantes, France",
-    period: "September 2021 - May 2022",
-    description: "Training in molecular biology, cell biology and life sciences."
-  },
-  {
-    id: 5,
-    degree: "PASS (Parcours d'Accès Spécifique Santé)",
-    school: "Université Grenoble Alpes",
-    location: "Grenoble, France",
-    period: "September 2020 - May 2021",
-    description: "Preparatory training for health studies with focus on cell biology, physical chemistry, human physiology and histology."
-  },
-  {
-    id: 6,
-    degree: "Scientific Baccalaureate",
-    school: "Lycée Gabriel Guist'hau",
-    location: "Nantes, France",
-    period: "September 2017 - July 2020",
-    description: "High school diploma with scientific specialization."
+    period: "Sep 2022 – Jun 2024",
+    description: "Undergraduate program in computer science with emphasis on data science, software engineering, and AI fundamentals."
   }
 ]
 
@@ -167,31 +147,59 @@ export const certifications = [
 
 export const languages = [
   { name: "French", level: "Native" },
-  { name: "English", level: "B2/C1 (TOEIC 900/990)" },
+  { name: "English", level: "C1 – TOEIC 900/990" },
   { name: "Spanish", level: "B1" },
-  { name: "Chinese", level: "Elementary" }
+  { name: "Chinese", level: "A2" }
 ]
 
 export const interests = [
-  "Artificial Intelligence",
-  "Biotechnology",
-  "Medical Research",
+  "Medical AI",
+  "Representation Learning",
+  "Multimodal Learning",
+  "Bioinformatics",
   "Hackathons",
   "Open Source",
-  "Technology Watch",
-  "Travel",
-  "Sports",
-  "Scientific Reading"
+  "Scientific Writing",
+  "Travel & Culture"
 ]
 
 export const contact = {
   email: "william.peoch@insa-lyon.fr",
-  phone: "+33 6 12 34 56 78",
-  location: "Hong Kong | Lyon, France",
+  phone: "+33 6 66 18 93 77",
+  location: "Lyon, France · Hong Kong SAR",
   social: {
     linkedin: "https://linkedin.com/in/williampeoch",
-    github: "https://github.com/williampeoch",
-    twitter: "https://twitter.com/williampeoch",
-    instagram: "https://instagram.com/williampeoch"
+    github: "https://github.com/williampeoch"
   }
 }
+
+export const awards = [
+  {
+    id: 1,
+    title: "Mistral AI x Alan Hackathon – 1st Place & Best Pitch",
+    organization: "Mistral AI · Alan",
+    description: "Built an AI medical assistant with image diagnostics and a voice/chat interface; ranked 1st among 150+ participants and received the Best Pitch Award.",
+    period: "Oct 2024"
+  },
+  {
+    id: 2,
+    title: "Paris Bio x AI Hackathon",
+    organization: "Entrepreneur First",
+    description: "Fine-tuned Pixtral-12B on chest X-ray datasets to deliver a medical report generator tailored for clinicians.",
+    period: "Dec 2024"
+  },
+  {
+    id: 3,
+    title: "LLM x Law Hackathon",
+    organization: "LegalTech Community",
+    description: "Developed an IP-focused paralegal RAG system that accelerates legal research workflows.",
+    period: "2024"
+  },
+  {
+    id: 4,
+    title: "Mistral Paris Hackathon",
+    organization: "Mistral AI",
+    description: "Fine-tuned Mistral-7B to generate ASCII art and deployed a real-time interface for creatives.",
+    period: "May 2024"
+  }
+]

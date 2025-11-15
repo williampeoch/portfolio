@@ -11,7 +11,6 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -46,7 +45,7 @@ export function Navbar() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <Link href="#home" className="text-xl font-bold gradient-text">
-              William Peoch
+              William Peoc'h
             </Link>
           </motion.div>
 
