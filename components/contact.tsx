@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { contact, languages, interests } from "@/lib/data"
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Instagram, Globe, Heart } from "lucide-react"
+import { contact, languages, interests, profile } from "@/lib/data"
+import { Mail, Phone, MapPin, Linkedin, Github, Globe, Heart, Download } from "lucide-react"
 import Link from "next/link"
 import { SectionWrapper } from "./section-wrapper"
 
@@ -133,6 +133,12 @@ export function Contact() {
                         <Mail className="w-4 h-4 mr-2" />
                         Send Email
                       </Link>
+                    </Button>
+                    <Button variant="neumorphism" size="lg" asChild>
+                      <a href={profile.resume} download>
+                        <Download className="w-4 h-4 mr-2" />
+                        Télécharger CV
+                      </a>
                     </Button>
                     <Button variant="neumorphism" size="lg" asChild>
                       <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">

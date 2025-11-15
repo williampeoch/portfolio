@@ -8,6 +8,7 @@ export const profile = {
   github: "https://github.com/williampeoch",
   website: "https://williampeoch.me",
   profileImage: "/profile.jpg",
+  resume: "/resume.pdf",
   about: "MSc Bioinformatics and Modeling student at INSA Lyon with research interests in medical AI, representation learning, multimodal learning, and foundation models for biomedical data. I build AI systems for biomedical and clinical applications and am currently spending Fall 2025 at City University of Hong Kong (Mathematics & Machine Learning)."
 }
 

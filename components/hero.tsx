@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { profile } from "@/lib/data"
-import { MapPin, Mail, Phone, Linkedin, Github } from "lucide-react"
+import { MapPin, Mail, Phone, Linkedin, Github, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -126,6 +126,12 @@ export function Hero() {
               >
                 <Button variant="neumorphism-primary" size="lg" asChild>
                   <Link href="#contact">Contact Me</Link>
+                </Button>
+                <Button variant="neumorphism" size="lg" asChild>
+                  <a href={profile.resume} download>
+                    <Download className="w-4 h-4 mr-2" />
+                    Télécharger CV
+                  </a>
                 </Button>
                 <Button variant="neumorphism" size="lg" asChild>
                   <Link href={profile.linkedin} target="_blank" rel="noopener noreferrer">

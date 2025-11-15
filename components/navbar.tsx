@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
+import { profile } from "@/lib/data"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -66,6 +67,12 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center space-x-4">
+            <Button variant="neumorphism" size="sm" asChild>
+              <a href={profile.resume} download>
+                <Download className="w-4 h-4 mr-2" />
+                CV
+              </a>
+            </Button>
             <Button variant="neumorphism-primary" size="sm" asChild>
               <Link href="#contact">Contact</Link>
             </Button>
@@ -107,7 +114,13 @@ export function Navbar() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 space-y-2">
+                <Button variant="neumorphism" size="sm" className="w-full" asChild>
+                  <a href={profile.resume} download onClick={() => setIsMobileMenuOpen(false)}>
+                    <Download className="w-4 h-4 mr-2" />
+                    Télécharger CV
+                  </a>
+                </Button>
                 <Button variant="neumorphism-primary" size="sm" className="w-full" asChild>
                   <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Contact
