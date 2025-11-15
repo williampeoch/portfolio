@@ -37,15 +37,15 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <motion.div
             className="flex-shrink-0"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="#home" className="text-xl font-bold gradient-text">
+            <Link href="#home" className="text-lg sm:text-xl font-bold gradient-text">
               William Peoc'h
             </Link>
           </motion.div>
@@ -79,42 +79,45 @@ export function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <Button
-              variant="neumorphism"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden relative p-2 rounded-lg transition-all duration-300 hover:bg-white/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+            aria-label="Toggle menu"
+          >
+            <motion.div
+              animate={isMobileMenuOpen ? { rotate: 90 } : { rotate: 0 }}
+              transition={{ duration: 0.2 }}
             >
               {isMobileMenuOpen ? (
-                <X size={20} className="text-gray-700" />
+                <X size={24} className="text-gray-800" strokeWidth={2} />
               ) : (
-                <Menu size={20} className="text-gray-700" />
+                <Menu size={24} className="text-gray-800" strokeWidth={2} />
               )}
-            </Button>
-          </div>
+            </motion.div>
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden neumorphism mt-2 p-4"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden mt-2 mx-2 sm:mx-3 mb-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="neumorphism p-4 space-y-2">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="neumorphism-small block px-4 py-3 text-base font-medium text-gray-700 hover-lift hover-press transition-all duration-300 mb-2"
+                  className="neumorphism-small block px-4 py-3 text-base font-medium text-gray-700 hover-lift hover-press transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-2">
+              <div className="pt-3 space-y-2 border-t border-gray-200 mt-3">
                 <Button variant="neumorphism" size="sm" className="w-full" asChild>
                   <a href={profile.resume} download onClick={() => setIsMobileMenuOpen(false)}>
                     <Download className="w-4 h-4 mr-2" />
