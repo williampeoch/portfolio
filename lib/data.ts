@@ -4,7 +4,7 @@ export const profile = {
   location: "Lyon, France · Hong Kong SAR",
   email: "william.peoch@insa-lyon.fr",
   phone: "+33 6 66 18 93 77",
-  linkedin: "https://linkedin.com/in/williampeoch",
+  linkedin: "https://www.linkedin.com/in/william-peoc-h-ba208a268/",
   github: "https://github.com/williampeoch",
   website: "https://williampeoch.me",
   profileImage: "/profile.jpg",
@@ -169,7 +169,7 @@ export const contact = {
   phone: "+33 6 66 18 93 77",
   location: "Lyon, France · Hong Kong SAR",
   social: {
-    linkedin: "https://linkedin.com/in/williampeoch",
+    linkedin: "https://www.linkedin.com/in/william-peoc-h-ba208a268/",
     github: "https://github.com/williampeoch"
   }
 }
