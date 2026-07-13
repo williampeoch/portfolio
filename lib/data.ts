@@ -1,112 +1,96 @@
 export const profile = {
   name: "William Peoc'h",
-  title: "MSc Bioinformatics Student · AI/ML · Deep Learning",
-  location: "Lyon, France · Hong Kong SAR",
+  title: "Machine Learning Research · AI for Science",
+  location: "Lyon, France",
   email: "william.peoch@insa-lyon.fr",
-  phone: "+33 6 66 18 93 77",
   linkedin: "https://www.linkedin.com/in/william-peoc-h-ba208a268/",
   github: "https://github.com/williampeoch",
   website: "https://williampeoch.me",
-  profileImage: "/profile.jpg",
+  profileImage: "/profile.png",
   resume: "/resume.pdf",
-  about: "MSc Bioinformatics and Modeling student at INSA Lyon with research interests in medical AI, representation learning, multimodal learning, and foundation models for biomedical data. I build AI systems for biomedical and clinical applications and am currently spending Fall 2025 at City University of Hong Kong (Mathematics & Machine Learning)."
+  summary: "University of Oxford ML research intern working on physical inverse problems, multimodal learning, and biological data.",
+  availability: "Available for a six-month final internship beginning in January 2027.",
+  about: "Machine learning researcher and engineer working on AI for Science, physical inverse problems, multimodal learning, and biological data. Currently an ML research intern with the Hallou Group at the University of Oxford, developing models that infer per-cell stress tensors from microscopy images. Available for a six-month final internship beginning in January 2027."
 }
 
 export const experiences = [
   {
     id: 1,
     title: "Machine Learning Research Intern",
-    company: "INRIA – French National Institute for Research in Digital Science and Technology",
-    location: "Lyon, France",
-    period: "Jun 2025 – Aug 2025",
-    description: "Fine-tuned transformer-based models (BERT, LLMs) for biomedical text classification, built NER pipelines that extract therapeutic targets from biomedical and clinical literature, curated large-scale biomedical datasets, and ran experiments autonomously on Grid'5000 HPC clusters.",
-    technologies: ["Transformers", "BERT", "LLMs", "NER", "PyTorch", "Biomedical NLP", "HPC"]
+    company: "University of Oxford — Hallou Group",
+    location: "Oxford, United Kingdom",
+    period: "Jun 2026 – Aug 2026",
+    description: [
+      "Developing deep learning methods for a physical inverse problem: inferring per-cell stress tensors directly from microscopy images of cellular tissues.",
+      "Designing and systematically evaluating local-global architectures that combine pretrained vision encoders with cross-attention to fuse cell morphology and tissue-level context.",
+      "Building a reproducible PyTorch experimentation pipeline spanning synthetic data generation, distributed multi-GPU training on Isambard-AI, controlled ablations, and model diagnostics."
+    ],
+    technologies: ["PyTorch", "Physical Inverse Problems", "Computer Vision", "Pretrained Encoders", "Cross-Attention", "Distributed Training", "Isambard-AI"]
   },
   {
     id: 2,
+    title: "Machine Learning Research Intern",
+    company: "Inria — French National Research Institute for Digital Science",
+    location: "Lyon, France",
+    period: "Jun 2025 – Aug 2025",
+    description: [
+      "Fine-tuned transformer models for biomedical text classification, named-entity recognition, and information extraction using PubMed-derived datasets.",
+      "Built NLP experimentation pipelines covering dataset construction, preprocessing, model training, evaluation, and error analysis.",
+      "Conducted reproducible experiments on HPC infrastructure, including model comparisons, hyperparameter studies, and controlled ablations."
+    ],
+    technologies: ["Transformers", "Biomedical NLP", "NER", "Information Extraction", "PyTorch", "HPC"]
+  },
+  {
+    id: 3,
     title: "Machine Learning Intern",
     company: "Axon' Cable – Medical Division",
     location: "Reims, France",
     period: "Apr 2024 – Jun 2024",
-    description: "Developed CNN and U-Net models from scratch for diabetic-retinopathy lesion detection/segmentation, boosted lesion classification accuracy to 86% through advanced preprocessing across heterogeneous datasets, integrated the full pipeline inside a C# application for ophthalmologists, and added a RAG module to enrich diagnostic context.",
-    technologies: ["CNN", "U-Net", "Computer Vision", "PyTorch", "Medical Imaging", "C#", "RAG"]
+    description: [
+      "Developed CNN and U-Net models for retinal image classification and segmentation across heterogeneous imaging datasets.",
+      "Integrated the inference pipeline into a C# application used by ophthalmologists for retinal image analysis."
+    ],
+    technologies: ["CNN", "U-Net", "Computer Vision", "PyTorch", "Retinal Imaging", "C#"]
   }
 ]
 
 export const projects = [
   {
     id: 1,
-    title: "X-Raystral - AI Medical Reports",
-    description: "Built during the Paris Bio x AI Hackathon: fine-tuned Pixtral-12B on chest X-ray datasets to deliver a medical report generator with structured outputs, literature grounding, and clinician-friendly UX.",
-    image: "/projects/xraystral.jpg",
-    technologies: ["Medical Imaging", "Fine-tuning", "Computer Vision", "LLM", "Next.js", "Pixtral-12B"],
-    github: "https://github.com/williampeoch/xraystral",
-    demo: "https://xraystral-demo.williampeoch.dev",
+    title: "Axonet",
+    description: "Neural network and automatic differentiation engine implemented from scratch in pure Python, covering scalar autograd, computational graphs, backpropagation, and multilayer perceptrons.",
+    technologies: ["Python", "Autograd", "Computational Graphs", "Backpropagation", "ML Internals"],
+    github: "https://github.com/williampeoch/axonet",
     featured: true,
-    hackathon: "Paris Bio x AI Hackathon - Medical report generator (Dec 2024)"
   },
   {
     id: 2,
-    title: "AI Virtual Medical Doctor",
-    description: "AI medical assistant with image diagnostics plus multilingual voice/chat interface; shipped in <24h and won 1st prize + Best Pitch vs 150+ participants at the Mistral AI x Alan Hackathon.",
-    image: "/projects/ai-doctor.jpg",
-    technologies: ["Next.js", "LLM", "Voice Interface", "Medical AI", "Computer Vision"],
-    github: "https://github.com/williampeoch/ai-medical-doctor",
-    demo: "https://ai-doctor.williampeoch.dev",
+    title: "Facial Composite",
+    description: "Facial composite generation system combining a variational autoencoder, latent-space search, a genetic algorithm, and an interactive interface.",
+    technologies: ["VAE", "Latent-Space Search", "Genetic Algorithm", "Generative Models", "Interactive ML"],
+    github: "https://github.com/williampeoch/facial-composite",
     featured: true,
-    hackathon: "1st Place & Best Pitch - Mistral AI x Alan Hackathon (Oct 2024)"
   },
   {
     id: 3,
-    title: "RAG Legal Research System",
-    description: "RAG (Retrieval-Augmented Generation) system for lawyers to accelerate legal research and automate workflows.",
-    image: "/projects/legal-rag.jpg",
-    technologies: ["RAG", "Next.js", "Docker", "Legal Tech", "NLP"],
-    github: "https://github.com/williampeoch/legal-rag",
-    demo: "https://legal-rag.williampeoch.dev",
+    title: "Multimodal Medical Assistant",
+    description: "Built at the Mistral AI x Alan Hackathon: a multimodal medical assistant combining image analysis, conversational AI, and voice interaction. Awarded First Place and Best Pitch.",
+    technologies: ["Multimodal Learning", "Image Analysis", "Conversational AI", "Voice Interaction"],
     featured: false,
-    hackathon: "LLM x Law Hackathon - November 2024"
-  },
-  {
-    id: 4,
-    title: "Mistral ASCII Art Generator",
-    description: "Fine-tuning Mistral-7B to generate ASCII art with a custom dataset and deployment with real-time interface.",
-    image: "/projects/ascii-art.jpg",
-    technologies: ["Finetuning", "LLM", "Python", "Mistral-7B", "ASCII Art"],
-    github: "https://github.com/williampeoch/mistral-ascii",
-    demo: "https://ascii-art.williampeoch.dev",
-    featured: false,
-    hackathon: "Mistral Paris Hackathon - May 2024"
-  },
-  {
-    id: 5,
-    title: "Brain Tumor Classification",
-    description: "Design and training of a CNN in PyTorch to classify brain MRI images and detect tumors using a curated dataset.",
-    image: "/projects/brain-tumor.jpg",
-    technologies: ["Deep Learning", "PyTorch", "Python", "CNN", "Medical Imaging", "MRI"],
-    github: "https://github.com/williampeoch/brain-tumor-classification",
-    demo: "https://brain-tumor.williampeoch.dev",
-    featured: false,
-    hackathon: "Personal Project"
+    hackathon: "First Place and Best Pitch - Mistral AI x Alan Hackathon, 2024"
   }
 ]
 
 export const skills = {
   machine_learning: [
-    "Deep Learning", "Transformers", "LLMs & Fine-tuning", "Computer Vision", "Generative Models", "Representation Learning", "Multimodal Learning", "Medical AI"
+    "PyTorch", "Transformers", "Representation Learning", "Multimodal Learning", "Computer Vision", "Biomedical NLP", "Model Evaluation", "Controlled Ablations"
   ],
-  mathematics: [
-    "Linear Algebra", "Probability Theory", "Statistics", "Optimization"
-  ],
-  bioinformatics: [
-    "Genomics", "Transcriptomics", "NGS", "RNA-seq", "Sequence Alignment", "Biomedical Data Curation"
+  ml_systems: [
+    "PyTorch DistributedDataParallel", "Slurm", "Multi-GPU Training", "HPC", "Isambard-AI", "Linux", "Docker", "Git"
   ],
   software: [
     "Python", "R", "TypeScript", "C#", "Docker", "Git", "Linux"
   ],
-  tools: [
-    "PyTorch", "TensorFlow", "HuggingFace", "NumPy", "SciPy", "scikit-learn", "pandas"
-  ]
 }
 
 export const education = [
@@ -115,8 +99,8 @@ export const education = [
     degree: "MSc in Bioinformatics and Modeling",
     school: "INSA Lyon – National Institute of Applied Sciences",
     location: "Lyon, France",
-    period: "Sep 2024 – Jun 2027",
-    description: "Graduate engineering curriculum focused on bioinformatics, mathematical modeling, and biomedical data science."
+    period: "Sep 2024 – Jun 2027, expected",
+    description: "Research-focused curriculum in machine learning, applied mathematics, statistics, computational biology, and numerical modeling."
   },
   {
     id: 2,
@@ -124,25 +108,15 @@ export const education = [
     school: "City University of Hong Kong",
     location: "Hong Kong SAR",
     period: "Sep 2025 – Jan 2026",
-    description: "Current exchange within the Department of Mathematics to deepen expertise in advanced machine learning."
+    description: "Completed exchange semester in mathematics and machine learning."
   },
   {
     id: 3,
-    degree: "Bachelor in Computer Science",
+    degree: "Two-year degree in Computer Science",
     school: "University Institute of Technology of Reims (URCA)",
     location: "Reims, France",
     period: "Sep 2022 – Jun 2024",
-    description: "Undergraduate program in computer science with emphasis on data science, software engineering, and AI fundamentals."
-  }
-]
-
-export const certifications = [
-  {
-    id: 1,
-    name: "TOEIC - Score 900/990",
-    issuer: "ETS Global",
-    date: "2024",
-    credential: "B2/C1 Level in English"
+    description: "Two-year computer science program at the University of Reims."
   }
 ]
 
@@ -154,20 +128,20 @@ export const languages = [
 ]
 
 export const interests = [
-  "Medical AI",
+  "AI for Science",
+  "Physical Inverse Problems",
   "Representation Learning",
   "Multimodal Learning",
-  "Bioinformatics",
-  "Hackathons",
-  "Open Source",
-  "Scientific Writing",
-  "Travel & Culture"
+  "Computer Vision",
+  "Biomedical NLP",
+  "Distributed Training",
+  "Biological Data"
 ]
 
 export const contact = {
   email: "william.peoch@insa-lyon.fr",
-  phone: "+33 6 66 18 93 77",
-  location: "Lyon, France · Hong Kong SAR",
+  website: "https://williampeoch.me",
+  location: "Lyon, France",
   social: {
     linkedin: "https://www.linkedin.com/in/william-peoc-h-ba208a268/",
     github: "https://github.com/williampeoch"
@@ -181,26 +155,5 @@ export const awards = [
     organization: "Mistral AI · Alan",
     description: "Built an AI medical assistant with image diagnostics and a voice/chat interface; ranked 1st among 150+ participants and received the Best Pitch Award.",
     period: "Oct 2024"
-  },
-  {
-    id: 2,
-    title: "Paris Bio x AI Hackathon",
-    organization: "Entrepreneur First",
-    description: "Fine-tuned Pixtral-12B on chest X-ray datasets to deliver a medical report generator tailored for clinicians.",
-    period: "Dec 2024"
-  },
-  {
-    id: 3,
-    title: "LLM x Law Hackathon",
-    organization: "LegalTech Community",
-    description: "Developed an IP-focused paralegal RAG system that accelerates legal research workflows.",
-    period: "2024"
-  },
-  {
-    id: 4,
-    title: "Mistral Paris Hackathon",
-    organization: "Mistral AI",
-    description: "Fine-tuned Mistral-7B to generate ASCII art and deployed a real-time interface for creatives.",
-    period: "May 2024"
   }
 ]

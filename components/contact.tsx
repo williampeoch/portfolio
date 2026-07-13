@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { contact, languages, interests, profile } from "@/lib/data"
-import { Mail, Phone, MapPin, Linkedin, Github, Globe, Heart, Download } from "lucide-react"
+import { Mail, MapPin, Linkedin, Github, Globe, Brain, Download } from "lucide-react"
 import Link from "next/link"
 import { SectionWrapper } from "./section-wrapper"
 
@@ -23,7 +23,7 @@ export function Contact() {
             Contact Me
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Actively seeking internship - Contact me to discuss opportunities
+            Available for a six-month final internship beginning in January 2027.
           </p>
         </motion.div>
 
@@ -48,17 +48,15 @@ export function Contact() {
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-indigo-500" />
-                  <a href={`tel:${contact.phone}`} className="text-gray-700 hover:text-indigo-600 transition-colors">
-                    {contact.phone}
+                  <Globe className="w-5 h-5 mr-3 text-indigo-500" />
+                  <a href={contact.website} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-indigo-600 transition-colors">
+                    williampeoch.me
                   </a>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-indigo-500" />
                   <span className="text-gray-700">{contact.location}</span>
                 </div>
-                
-                {/* Social Networks section removed as requested */}
               </CardContent>
             </Card>
           </motion.div>
@@ -95,8 +93,8 @@ export function Contact() {
             <Card variant="neumorphism" className="hover-lift">
               <CardHeader>
                 <CardTitle className="flex items-center text-xl font-display">
-                  <Heart className="w-5 h-5 mr-2 text-indigo-500" />
-                  Interests
+                  <Brain className="w-5 h-5 mr-2 text-indigo-500" />
+                  Research Focus
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -123,9 +121,9 @@ export function Contact() {
             >
               <Card variant="neumorphism">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 font-display">Internship Search</h3>
+                  <h3 className="text-2xl font-bold mb-4 font-display">Final Internship Search</h3>
                   <p className="text-gray-600 mb-6">
-                    I am actively seeking an internship in AI, bioinformatics or biotechnology. Let's discuss exciting opportunities!
+                    I am looking for machine learning research and research engineering roles in AI for Science, physical inverse problems, multimodal learning, or biological data.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button variant="neumorphism-primary" size="lg" asChild>
@@ -144,6 +142,12 @@ export function Contact() {
                       <Link href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-4 h-4 mr-2" />
                         LinkedIn
+                      </Link>
+                    </Button>
+                    <Button variant="neumorphism" size="lg" asChild>
+                      <Link href={contact.social.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
                       </Link>
                     </Button>
                   </div>

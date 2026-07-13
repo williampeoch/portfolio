@@ -18,13 +18,13 @@ export function About() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
-            About Me
+            Research Focus
           </h2>
         </motion.div>
 
         <Card variant="neumorphism" className="hover-lift">
           <CardHeader>
-            <CardTitle className="text-2xl font-display gradient-text">Presentation</CardTitle>
+            <CardTitle className="text-2xl font-display gradient-text">Machine Learning for Scientific Data</CardTitle>
           </CardHeader>
           <CardContent>
             <motion.p

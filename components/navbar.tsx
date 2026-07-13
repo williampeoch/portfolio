@@ -9,9 +9,10 @@ import { profile } from "@/lib/data"
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
+  { name: "Focus", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -46,7 +47,7 @@ export function Navbar() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <Link href="#home" className="text-lg sm:text-xl font-bold gradient-text">
-              William Peoc'h
+              {profile.name}
             </Link>
           </motion.div>
 
@@ -137,4 +138,3 @@ export function Navbar() {
     </motion.nav>
   )
 }
-

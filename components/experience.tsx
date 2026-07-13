@@ -19,10 +19,10 @@ export function Experience() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
-            Experience & Internships
+            Research Experience
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            My machine learning internships and professional experiences
+            Oxford, Inria, and applied machine learning work for scientific and biomedical data.
           </p>
         </motion.div>
 
@@ -56,9 +56,11 @@ export function Experience() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {experience.description}
-                  </p>
+                  <ul className="text-gray-700 mb-4 leading-relaxed space-y-2 list-disc pl-5">
+                    {(Array.isArray(experience.description) ? experience.description : [experience.description]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                   <div className="flex flex-wrap gap-2">
                     {experience.technologies.map((tech) => (
                       <Badge key={tech} variant="neumorphism" className="hover-lift">

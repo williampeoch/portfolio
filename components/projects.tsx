@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { projects } from "@/lib/data"
-import { ExternalLink, Github } from "lucide-react"
+import { Github } from "lucide-react"
 import Link from "next/link"
 import { SectionWrapper } from "./section-wrapper"
 
@@ -21,10 +21,10 @@ export function Projects() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
-            My Projects
+            Selected ML Projects
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            AI projects, hackathons and bioinformatics applications
+            Projects selected for research depth, machine learning internals, and original modeling work.
           </p>
         </motion.div>
 
@@ -44,17 +44,23 @@ export function Projects() {
                     <CardTitle className="text-xl font-display">
                       {project.title}
                     </CardTitle>
-                    {/* Project icon buttons removed as requested */}
+                    {project.github && (
+                      <Button variant="neumorphism" size="icon" asChild>
+                        <Link href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} GitHub repository`}>
+                          <Github className="w-4 h-4" />
+                        </Link>
+                      </Button>
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  {project.hackathon && project.hackathon.includes("1st Place") && (
+                  {project.hackathon && (
                     <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
                       <p className="text-sm text-blue-700 font-medium">
-                        🏆 {project.hackathon}
+                        {project.hackathon}
                       </p>
                     </div>
                   )}

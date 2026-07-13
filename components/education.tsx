@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { education, certifications } from "@/lib/data"
+import { education, awards } from "@/lib/data"
 import { GraduationCap, Award, Calendar, MapPin } from "lucide-react"
 import { SectionWrapper } from "./section-wrapper"
 
@@ -18,10 +18,10 @@ export function Education() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-display gradient-text">
-            Education & Certifications
+            Education & Selected Award
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            My academic background in bioinformatics and certifications
+            Academic background, followed by selected recognition.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export function Education() {
             </div>
           </div>
 
-          {/* Certifications */}
+          {/* Selected awards */}
           <div>
             <motion.h3
               className="text-2xl font-bold mb-6 flex items-center font-display"
@@ -85,13 +85,13 @@ export function Education() {
               transition={{ duration: 0.6 }}
             >
               <Award className="w-6 h-6 mr-3 text-yellow-500" />
-              Certifications
+              Selected Award
             </motion.h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
+              {awards.map((award, index) => (
                 <motion.div
-                  key={cert.id}
+                  key={award.id}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -100,17 +100,19 @@ export function Education() {
                   <Card variant="neumorphism" className="hover-lift h-full">
                     <CardHeader>
                       <CardTitle className="text-lg font-display">
-                        {cert.name}
+                        {award.title}
                       </CardTitle>
                       <div className="text-gray-600">
-                        <p className="font-medium">{cert.issuer}</p>
-                        <p className="text-sm">ID: {cert.credential}</p>
+                        <p className="font-medium">{award.organization}</p>
                       </div>
                     </CardHeader>
                     <CardContent>
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        {award.description}
+                      </p>
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="w-4 h-4 mr-2" />
-                        <span>Obtained in {cert.date}</span>
+                        <span>{award.period}</span>
                       </div>
                     </CardContent>
                   </Card>

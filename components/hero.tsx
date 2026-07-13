@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { profile } from "@/lib/data"
-import { MapPin, Mail, Phone, Linkedin, Github, Download } from "lucide-react"
+import { MapPin, Mail, Linkedin, Github, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -89,9 +89,18 @@ export function Hero() {
                 {profile.title}
               </motion.h2>
 
+              <motion.p
+                className="max-w-3xl mx-auto text-base sm:text-lg text-gray-700 leading-relaxed mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                {profile.summary}
+              </motion.p>
+
               {/* Location */}
               <motion.div
-                className="flex items-center justify-center mb-8 text-gray-600"
+                className="flex items-center justify-center mb-4 text-gray-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -99,6 +108,15 @@ export function Hero() {
                 <MapPin className="w-5 h-5 mr-2" />
                 <span>{profile.location}</span>
               </motion.div>
+
+              <motion.p
+                className="mb-8 text-sm sm:text-base font-medium text-gray-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                {profile.availability}
+              </motion.p>
 
               {/* Contact info */}
               <motion.div
@@ -110,10 +128,6 @@ export function Hero() {
                 <div className="flex items-center neumorphism-small px-4 py-2">
                   <Mail className="w-4 h-4 mr-2" />
                   <span>{profile.email}</span>
-                </div>
-                <div className="flex items-center neumorphism-small px-4 py-2">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>{profile.phone}</span>
                 </div>
               </motion.div>
 
@@ -173,4 +187,3 @@ export function Hero() {
     </section>
   )
 }
-
